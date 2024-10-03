@@ -46,14 +46,15 @@ nav {
 }
 .lielement {
     display: flex;
-    margin-right: 0,5%;
-    margin-left: 0,5%;
+    flex:content;
+    text-align: center;
+    margin: 0,10%;
     list-style-type: none;
     text-transform: uppercase;
     padding: 1%;
     font-family: "Martel", serif;
     font-weight: 700;
-    font-size: 70%;
+    font-size: 90%;
     color: #fff;
     text-decoration: none;
 }
