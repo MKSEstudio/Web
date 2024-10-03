@@ -46,8 +46,8 @@ nav {
 }
 .lielement {
     display: flex;
-    margin-right: 1%;
-    margin-left: 1%;
+    margin-right: 0,5%;
+    margin-left: 0,5%;
     list-style-type: none;
     text-transform: uppercase;
     padding: 1%;
