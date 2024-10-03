@@ -56,7 +56,7 @@ nav {
     font-weight: 700;
     font-size: 90%;
     color: #fff;
-    text-decoration: none;
+    text-decoration:none;
 }
 .lielement:active {
     background-color: #921916;
