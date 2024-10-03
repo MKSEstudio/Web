@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap');
+/*.martel-extralight {font-family: "Martel", serif; font-weight: 200;font-style: normal}
+.martel-light {font-family: "Martel", serif; font-weight: 300; font-style: normal;}
+.martel-regular {font-family: "Martel", serif; font-weight: 400; font-style: normal;}
+.martel-semibold {font-family: "Martel", serif;font-weight: 600;font-style: normal;}
+.martel-bold {font-family: "Martel", serif; font-weight: 700; font-style: normal;}
+.martel-extrabold {font-family: "Martel", serif; font-weight: 800; font-style: normal;}
+.martel-black {font-family: "Martel", serif;font-weight: 900;font-style: normal;}*/
+
+/*TERMINADO Estilos Banner de Navegacion*/
+.banner {
+     position: relative;
+     height: 250px;
+     overflow: hidden;
+     margin: 0;
+     padding: 0;
+}
+.banner img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+.logo-container {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     height: 200px;
+}
+#estilodellogotipo {
+     width: auto;
+     fill: white;
+}
+#estilodellogotipo svg {
+    width: 200px;
+    height: 200px;
+}
+
+/*TERMINADO Estilos Barra de Navegacion*/
+nav {
+    background-color: #191e34;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+.lielement {
+    display: flex;
+    margin-right: 35px;
+    margin-left: 35;
+    list-style-type: none;
+    text-transform: uppercase;
+    padding: 3px;
+    font-family: "Martel", serif;
+    font-weight: 700;
+    font-size: 12pt;
+    color: #fff;
+    text-decoration: none;
+}
+.lielement:active {
+    background-color: #921916;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+}
+
+/*TERMINADO Estilos del carrusel*/
+#subtitulares {
+    font-family: "Martel", serif; 
+    font-weight: 700;
+    font-style: normal;
+    color: #fff;
+    background-color: #515a47;
+    padding: 1%;
+    margin-right: 50%;
+    font-size: 12pt;
+    margin-top: 3%;
+    border-radius: 0px 15px 15px 0px;
+}
+.carrusel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+.card {
+    flex: 10 0 auto;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    margin: 4%;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+}
+.card:active {
+    transform: scale(0.95); 
+}
+.card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover img {
+    transform: scale(1.1);
+}
+.card:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+.card:hover:before {
+    opacity: 1;
+}
+.card:active:before {
+    background-color: rgba(174, 47, 47, 0.8); /* Color de fondo del cuadrado */
+    height: 100%;
+    opacity: 10%;
+}
+.card::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(146, 25, 22, 0.8); 
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-family: "Martel", serif;
+}
+.card:hover::after {
+    opacity: 1;
+}
+
+/*TERMINADO Estilos Acerca de mi*/
+.container {
+    background-color: #515a47;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 3%;
+    font-family: "Martel", serif;
+    font-size: small;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col-4 {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.col-8 {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding-left: 10px;
+}
+.image-container {
+    text-align: center;
+}
+.image-container img {
+    max-width: 100%;
+    width: 300px;
+    margin-left: 5%;
+}
+.text-container h4 {
+    color: #fff;
+    font-family: "Martel", serif;
+    font-weight: 1000;
+    font-size: larger;
+}
+.text-container p {
+    margin-bottom: 1em;
+    color: #fff;
+    font-family: "Martel", serif;
+    font-size: small;
+    text-align: justify;
+    margin-right: 5%;
+}
+.more-info-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3%;
+}
+.more-info-btn button {
+    background-color: gray;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: "Martel", serif;
+    font-size: 14px;
+}
+.more-info-btn button:hover {
+    background-color: #921916;
+}
+
+/*TERMINADO Estilos de cuerpo general*/
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.5);
+    background-size: 100% 100%;
+    font-family: Martel;
+}
+
+/*TERMINADO Estilos de footer*/
+footer {
+    margin-top: 3%;
+    background-color:#191e34;
+    padding: 1%;
+    color: #fff;
+}
+.footer a:hover img {
+  background-color: #921916;
+  border-radius: 30%;
+  padding: 3px;
+}
