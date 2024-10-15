@@ -46,7 +46,7 @@ nav {
 }
 .lielement {
     display: flex;
-    flex:content;
+    flex:flex center;
     text-align: center;
     margin: 0,10%;
     list-style-type: none;
