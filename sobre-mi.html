@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Diseño Gráfico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Frank+Ruehl+CLM&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            color: #AEB8C4;
+            animation: backgroundAnimation 15s ease infinite;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-color: #1A1E34; }
+            50% { background-color: #911915; }
+            90% { background-color: #515A47; }
+            100% { background-color: #1A1E34; }
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(26, 30, 52, 0.8);
+        }
+
+        img {
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #AEB8C4;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #911915;
+        }
+
+        .sobre-mi {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(26, 30, 52, 0.9);
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .foto-perfil {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid white;
+            padding: 5px;
+            object-fit: cover;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        h2, h3 {
+            margin: 10px 0;
+            color: #FFFFFF;
+        }
+
+        .cursos, .habilidades {
+            margin-top: 20px;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .cursos:hover, .habilidades:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        .lista-cursos, .lista-habilidades {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        .experiencia, .educacion, .habilidades-cuadro, .presentacion {
+            margin: 15px 0;
+            border: 1px solid #AEB8C4;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+
+        .contacto {
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(26, 30, 52, 0.8);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .contacto h3 {
+            margin-bottom: 15px;
+            color: #FFFFFF;
+        }
+
+        .contacto a {
+            display: block;
+            color: #AEB8C4;
+            text-decoration: none;
+            margin: 5px 0;
+            transition: color 0.3s;
+        }
+
+        .contacto a:hover {
+            color: #911915;
+        }
+
+        .ventana-emergente {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        #imagenes-emergente {
+            max-height: 80vh;
+            overflow-y: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ventana-emergente img {
+            max-width: 400px;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .ventana-emergente video {
+            max-width: 400px;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .cerrar {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 2px solid white;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .cerrar:hover {
+            background: rgba(255, 0, 0, 0.7);
+        }
+
+        @media (max-width: 600px) {
+            .cerrar {
+                font-size: 24px;
+            }
+
+            #imagenes-emergente img,
+            #imagenes-emergente video {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="Imagenes/Marca en blanco.png" alt="Logo de la Marca">
+        </a>
+        <nav>
+            <a href="diseño-grafico.html">Diseño Gráfico</a>
+            <a href="ilustraciones.html">Ilustraciones</a>
+            <a href="edicion-de-video.html">Edición de Video</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="extras.html">Extras</a>
+            <a href="sobre-mi.html">Sobre Mí</a>
+        </nav>
+    </header>
+
+    <div class="sobre-mi" id="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <img src="foto-perfil.jpg" alt="Foto de Perfil" class="foto-perfil"> <!-- Foto redonda -->
+        <p>Aquí puedes incluir una breve descripción sobre ti, tus habilidades y experiencia.</p>
+        
+        <div class="presentacion">
+            <h3>Presentación</h3>
+            <p>Aquí puedes hablar sobre ti, tus objetivos y tu enfoque profesional. Es un espacio para mostrar tu personalidad y tus aspiraciones.</p>
+        </div>
+        
+        <div class="experiencia">
+            <h3>Experiencia Laboral</h3>
+            <p>Descripción de tu experiencia laboral aquí.</p>
+        </div>
+
+        <div class="educacion">
+            <h3>Educación</h3>
+            <p>Detalles sobre tu educación aquí.</p>
+        </div>
+
+        <div class="habilidades" onclick="toggleHabilidades()">Ver Habilidades</div>
+        <div class="lista-habilidades" id="lista-habilidades">
+            <ul>
+                <li>Diseño Gráfico</li>
+                <li>Edición de Video</li>
+                <li>Fotografía</li>
+                <li>Marketing Digital</li>
+                    <!-- Agrega más habilidades según sea necesario -->
+            </ul>
+        </div>
+
+
+
+        <div class="cursos" onclick="toggleCursos()">Cursos Realizados</div>
+        <div class="lista-cursos" id="lista-cursos">
+            <ul>
+                <li>Curso de Diseño Gráfico</li>
+                <li>Curso de Fotografía</li>
+                <li>Curso de Edición de Video</li>
+                <li>Curso de Marketing Digital</li>
+                <!-- Agrega más cursos según sea necesario -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="contacto">
+        <h3>Contacto</h3>
+        <a href="mailto:tucorreo@example.com">Email: tucorreo@example.com</a>
+        <a href="https://www.instagram.com/tuusuario" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
+        <a href="https://www.behance.net/tuusuario" target="_blank">Behance</a>
+    </div>
+
+    <div class="ventana-emergente" id="ventana-emergente">
+        <span class="cerrar" onclick="cerrarVentana()">&times;</span>
+        <div id="imagenes-emergente"></div>
+    </div>
+
+    <script>
+        function toggleCursos() {
+            const lista = document.getElementById('lista-cursos');
+            if (lista.style.display === 'block') {
+                lista.style.display = 'none'; // Cerrar la lista
+            } else {
+                lista.style.display = 'block'; // Abrir la lista
+            }
+        }
+
+        function toggleHabilidades() {
+            const lista = document.getElementById('lista-habilidades');
+            if (lista.style.display === 'block') {
+                lista.style.display = 'none'; // Cerrar la lista
+            } else {
+                lista.style.display = 'block'; // Abrir la lista
+            }
+        }
+
+
+
+        function cerrarVentana() {
+            const ventana = document.getElementById('ventana-emergente');
+            ventana.style.display = 'none'; // Ocultar la ventana emergente
+        }
+    </script>
+</body>
+</html>

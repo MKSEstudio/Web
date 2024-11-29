@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Diseño Gráfico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Frank+Ruehl+CLM&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            color: #AEB8C4;
+            overflow-x: hidden; /* Evitar desplazamiento horizontal */
+            animation: backgroundAnimation 15s ease infinite;
+            height: 150%; /* Altura completa de la vista */
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-color: #1A1E34; }
+            50% { background-color: #911915; }
+            90% { background-color: #515A47; }
+            100% { background-color: #1A1E34; }
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(26, 30, 52, 0.8);
+        }
+
+        img {
+            height: 80px; /* Aumentar el tamaño del logo */
+            margin-bottom: 20px; /* Espacio entre el logo y el menú */
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap; /* Permitir que los enlaces se ajusten */
+            justify-content: center; /* Centrar los enlaces */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #AEB8C4;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #911915;
+        }
+
+        main {
+            flex: 1; /* Permitir que el main ocupe el espacio restante */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Alinear al inicio */
+            padding: 20px;
+            overflow-y: auto; /* Permitir desplazamiento vertical */
+        }
+
+        .categoria {
+            margin: 10px 0;
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+
+        .categoria:hover {
+            transform: scale(1.05);
+        }
+
+        #sobre-mi {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        #galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .foto {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .foto:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center; /* Centrar los enlaces en móviles */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="Imagenes/Marca en blanco.png" alt="Logo de la Marca">
+        </a>
+        <nav>
+            <a href="diseño-grafico.html">Diseño Gráfico</a>
+            <a href="ilustraciones.html">Ilustraciones</a>
+            <a href="edicion-de-video.html">Edición de Video</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="extras.html">Extras</a>
+            <a href="sobre-mi.html">Sobre Mí</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Bienvenido a Mi Espacio Creativo</h1>
+        <section id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <p>Soy un apasionado del diseño gráfico con experiencia en diversas áreas. Mi objetivo es crear trabajos que combinen creatividad y funcionalidad.</p>
+        </section>
+
+        <section id="galeria">
+            <div class="foto">
+                <img src="trabajo1.jpg" alt="Trabajo 1" />
+            </div>
+            <div class="foto">
+                <img src="trabajo2.jpg" alt="Trabajo 2" />
+            </div>
+            <div class="foto">
+                <img src="trabajo3.jpg" alt="Trabajo 3" />
+            </div>
+            <div class="foto">
+                <img src="trabajo4.jpg" alt="Trabajo 4" />
+            </div>
+            <!-- Agrega más fotos según sea necesario -->
+        </section>
+    </main>
+</body>
+</html>
