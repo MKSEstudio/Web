@@ -27,6 +27,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
             background-color: rgba(26, 30, 52, 0.8);
         }
 
@@ -154,6 +155,21 @@
 @media (max-width: 600px) {
     .cerrar {
         font-size: 24px; /* Ajustar tamaño del botón cerrar en pantallas pequeñas */
+    }
+
+    .ventana-emergente {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1000;
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+    padding: 0; /* Eliminar padding */
     }
 
     #imagenes-emergente img,
