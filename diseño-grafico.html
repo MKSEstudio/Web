@@ -10,6 +10,11 @@
     height: 100%;
     margin: 0;
     overflow: hidden; /* Evitar desplazamiento */
+    box-sizing: border-box; /* Incluir padding y border en el ancho y alto */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Aplicar box-sizing a todos los elementos */
 }
 
 body {
@@ -30,7 +35,6 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    padding: 2%;
     align-items: center;
     padding: 20px;
     background-color: rgba(26, 30, 52, 0.8);
@@ -119,19 +123,22 @@ nav a:hover {
     align-items: flex-start;
     z-index: 1000;
     overflow-y: auto; /* Permitir desplazamiento vertical */
+    padding: 0; /* Eliminar padding */
 }
 
 #imagenes-emergente {
+    max-height: 80vh; /* Altura máxima para permitir desplazamiento */
     overflow-y: auto; /* Habilitar desplazamiento vertical */
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding: 0 10px; /* Espaciado lateral */
 }
 
 .ventana-emergente img,
 .ventana-emergente video {
-    max-width: 90%; /* Ajustar tamaño a pantallas pequeñas */
+    max-width: 70%; /* Ajustar tamaño a pantallas pequeñas */
     height: auto;
     margin: 10px 0;
     border-radius: 8px;
@@ -139,8 +146,8 @@ nav a:hover {
 
 .cerrar {
     position: absolute;
-    top: 30px;
-    right: 15%;
+    top: 10px; /* Mayor distancia desde la parte superior */
+    right: 12%; /* Ajustar la posición desde la derecha */
     color: white;
     font-size: 30px;
     background: rgba(0, 0, 0, 0.7);
@@ -157,7 +164,7 @@ nav a:hover {
 
 @media (max-width: 600px) {
     .cerrar {
-        font-size: 24px;
+        font-size: 24px; /* Ajustar tamaño del botón cerrar en pantallas pequeñas */
     }
 
     #imagenes-emergente img,
