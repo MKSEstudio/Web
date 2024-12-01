@@ -6,62 +6,52 @@
     <title>Página de Diseño Gráfico</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Frank+Ruehl+CLM&display=swap" rel="stylesheet">
 <style>
-    html, body {
-    height: 100%;
-    margin: 0;
-    overflow: hidden; /* Evitar desplazamiento */
-    box-sizing: border-box; /* Incluir padding y border en el ancho y alto */
-}
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            color: #AEB8C4;
+            animation: backgroundAnimation 15s ease infinite;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-*, *::before, *::after {
-    box-sizing: inherit; /* Aplicar box-sizing a todos los elementos */
-}
+        @keyframes backgroundAnimation {
+            0% { background-color: #1A1E34; }
+            50% { background-color: #911915; }
+            90% { background-color: #515A47; }
+            100% { background-color: #1A1E34; }
+        }
 
-body {
-    font-family: 'Quicksand', sans-serif;
-    color: #AEB8C4;
-    animation: backgroundAnimation 15s ease infinite;
-    display: flex;
-    flex-direction: column;
-}
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(26, 30, 52, 0.8);
+        }
 
-@keyframes backgroundAnimation {
-    0% { background-color: #1A1E34; }
-    50% { background-color: #911915; }
-    90% { background-color: #515A47; }
-    100% { background-color: #1A1E34; }
-}
+        img {
+            height: 80px;
+            margin-bottom: 20px;
+        }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: rgba(26, 30, 52, 0.8);
-    width: 100%;
-}
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-img {
-    height: 80px;
-    margin-bottom: 20px;
-}
+        nav a {
+            text-decoration: none;
+            color: #AEB8C4;
+            transition: color 0.3s;
+        }
 
-nav {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav a {
-    text-decoration: none;
-    color: #AEB8C4;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #911915;
-}
+        nav a:hover {
+            color: #911915;
+        }
 
 #galeria {
     display: grid;
